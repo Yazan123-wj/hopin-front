@@ -14,7 +14,8 @@ export function Hero() {
         sizes="100vw"
         className="object-cover object-center"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-black/20" />
+      <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/15" />
       <div className="absolute inset-x-0 top-[var(--header-height)] flex items-start justify-between px-5 py-5 text-[11px] tracking-[0.18em] uppercase text-white md:px-8">
         <p>{site.location.city}</p>
         <p>{site.location.status}</p>
