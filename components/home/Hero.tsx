@@ -17,21 +17,24 @@ export function Hero() {
       <div className="absolute inset-0 bg-black/20" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/15" />
       <div className="absolute inset-x-0 top-[var(--header-height)] flex items-start justify-between px-5 py-5 text-[11px] tracking-[0.18em] uppercase text-white md:px-8">
-        <p>{site.location.city}</p>
+        <p>Gymea Bay Road</p>
         <p>{site.location.status}</p>
       </div>
       <div className="absolute inset-x-0 bottom-0 px-5 pb-10 md:px-8 md:pb-14">
-        <h1 className="max-w-[10ch] font-serif text-[clamp(3.8rem,10vw,9.2rem)] leading-[0.84] text-white">
-          Good days
+        <h1 className="max-w-[12ch] font-serif text-[clamp(3.2rem,8vw,7.4rem)] leading-[0.88] text-white">
+          Coffee, breakfast,
           <br />
-          start here.
+          lunch, dinner
+          <br />
+          and dessert.
         </h1>
-        <p className="mt-6 text-[13px] tracking-[0.18em] uppercase text-white/85">
-          Croffles · Coffee · Good company
+        <p className="mt-6 max-w-[42ch] text-[15px] leading-6 text-white/90 md:text-[16px]">
+          Proper coffee from early. Breakfast until 3pm. A full lunch and dinner menu after that,
+          alongside something sweet whenever the mood takes you.
         </p>
         <div className="mt-8 flex flex-wrap items-end justify-between gap-6">
           <ArrowLink href="/menu" variant="solid" invert>
-            See the menu
+            Explore the Menu
           </ArrowLink>
           <a
             href="#statement"

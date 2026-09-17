@@ -9,11 +9,15 @@ export function LocationBand() {
     >
       <p className="text-[12px] tracking-[0.22em] uppercase text-secondary">Visit</p>
       <h2 className="mt-5 font-serif text-[clamp(3rem,7vw,5.8rem)] leading-[0.88]">
-        {site.name}
+        Come
+        <br />
+        hop in.
+      </h2>
+      <p className="mt-6 text-[16px] leading-7">
+        {site.location.address}
         <br />
         {site.location.city}
-      </h2>
-      <p className="mt-6 text-[16px] leading-7">{site.location.address}</p>
+      </p>
       <div className="mt-5 space-y-2 text-[14px]">
         {site.openingHours.map((row) => (
           <p key={row.days}>
@@ -22,7 +26,7 @@ export function LocationBand() {
         ))}
       </div>
       <div className="mt-8">
-        <ArrowLink href={site.location.mapsUrl}>Get directions</ArrowLink>
+        <ArrowLink href={site.location.mapsUrl}>Get Directions</ArrowLink>
       </div>
     </section>
   );

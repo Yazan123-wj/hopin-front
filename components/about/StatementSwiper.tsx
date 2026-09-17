@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react";
 
 const slides = [
-  "A warmer way to start — croffles, coffee, and a room worth staying in.",
-  "Come for the coffee. Stay for the croffles.",
-  "Make it fresh. Keep it simple. Serve it kindly.",
+  "Sharing goodness.",
+  "Open late, every night.",
+  "Made to be savoured.",
+  "A café first.",
 ];
 
 export function StatementSwiper() {

@@ -3,10 +3,12 @@ import Image from "next/image";
 import { StatementSwiper } from "@/components/about/StatementSwiper";
 import { ArrowLink } from "@/components/shared/ArrowLink";
 import { Reveal } from "@/components/shared/Reveal";
+import { site } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "About Us",
-  description: "The story behind the café, the room, and the food we put out every morning.",
+  title: "About",
+  description:
+    "Hop In is a neighbourhood café on Gymea Bay Road, open from 6am to 10pm, seven days a week.",
 };
 
 export default function AboutPage() {
@@ -15,7 +17,7 @@ export default function AboutPage() {
       <section className="relative h-[100dvh] min-h-[32rem] overflow-hidden">
         <Image
           src="/images/space.jpg"
-            alt="The Hop In café"
+          alt="The Hop In café"
           fill
           priority
           sizes="100vw"
@@ -23,11 +25,9 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-black/25" />
         <h1 className="absolute bottom-10 left-5 max-w-[10ch] font-serif text-[clamp(3.8rem,11vw,9.5rem)] leading-[0.82] text-white md:left-8 md:bottom-14">
-          We’re here
+          Sharing
           <br />
-          for the
-          <br />
-          good bits.
+          goodness
         </h1>
       </section>
 
@@ -47,13 +47,15 @@ export default function AboutPage() {
           <Reveal>
             <p className="text-[12px] tracking-[0.22em] uppercase text-secondary">Our story</p>
             <h2 className="mt-5 font-serif text-[clamp(2.6rem,6vw,5rem)] leading-[0.9]">
-              Come in.
+              A café
               <br />
-              Stay a while.
+              first.
             </h2>
-            <p className="mt-8 max-w-[36ch] text-[17px] leading-7">
-              We built this café around a single idea: mornings should feel better than they have to.
-              Fresh croffles, proper coffee, and a space that doesn’t hurry you out the door.
+            <p className="mt-8 max-w-[38ch] text-[17px] leading-7">
+              Hop In is a neighbourhood café on Gymea Bay Road, open from 6am to 10pm, seven days a
+              week. Proper coffee from early. Breakfast until 3pm. A full lunch and dinner menu after
+              that — burgers, sandwiches, pastas, salads and steak — alongside acai bowls, pancakes,
+              French toast and, yes, the croffles.
             </p>
           </Reveal>
         </div>
@@ -61,15 +63,13 @@ export default function AboutPage() {
 
       <section className="bg-header px-5 py-[var(--section-space)] text-center text-header-text md:px-12 md:py-[var(--section-space-lg)]">
         <Reveal>
-          <p className="text-[12px] tracking-[0.22em] uppercase text-accent">How we cook</p>
-          <h2 className="mx-auto mt-6 max-w-[14ch] font-serif text-[clamp(2.8rem,7vw,6.4rem)] leading-[0.88]">
-            Make it fresh.
-            Keep it simple.
-            Serve it kindly.
+          <p className="text-[12px] tracking-[0.22em] uppercase text-accent">Open late</p>
+          <h2 className="mx-auto mt-6 max-w-[12ch] font-serif text-[clamp(2.8rem,7vw,6.4rem)] leading-[0.88]">
+            Open late, every night.
           </h2>
           <p className="mx-auto mt-10 max-w-[38ch] text-[16px] leading-7 text-header-text/80">
-            The food is the point. Everything else — the room, the cups, the pace of service — is there
-            to let it land.
+            When the rest of the village has shut, you can still get dinner, dessert and a decent
+            coffee.
           </p>
         </Reveal>
       </section>
@@ -107,7 +107,7 @@ export default function AboutPage() {
         <div className="img-zoom relative mt-3 h-[42vh] min-h-[16rem] md:mt-4 md:h-[46vh]">
           <Image
             src="/images/storefront.jpg"
-            alt="The Hop In café"
+            alt="Hop In’s courtyard seating, with tables set beneath a timber canopy"
             fill
             sizes="100vw"
             className="object-cover object-[center_45%]"
@@ -116,11 +116,15 @@ export default function AboutPage() {
       </section>
 
       <section className="bg-background px-5 pb-[var(--section-space-lg)] pt-16 text-center md:px-8 md:pt-24">
-        <p className="mx-auto max-w-[12ch] font-serif text-[clamp(2.8rem,7vw,6.2rem)] leading-[0.88]">
-          Where croffles, coffee and comfort come together.
+        <p className="text-[12px] tracking-[0.22em] uppercase text-secondary">Find us</p>
+        <h2 className="mx-auto mt-5 max-w-[10ch] font-serif text-[clamp(2.8rem,7vw,6.2rem)] leading-[0.88]">
+          Come hop in.
+        </h2>
+        <p className="mx-auto mt-6 max-w-[28ch] text-[16px] leading-7 text-muted">
+          {site.location.address}, {site.location.city}. {site.location.note}.
         </p>
         <div className="mt-10 flex justify-center">
-          <ArrowLink href="/menu">See the menu</ArrowLink>
+          <ArrowLink href={site.location.mapsUrl}>Get Directions</ArrowLink>
         </div>
       </section>
     </>

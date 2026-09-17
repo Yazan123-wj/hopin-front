@@ -90,7 +90,7 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="/#location"
+              href="/contact"
               className="inline-flex items-center rounded-[6px] bg-secondary px-4 py-2 text-[11px] tracking-[0.16em] uppercase text-background transition-colors duration-300 hover:bg-secondary/90"
             >
               Visit Us

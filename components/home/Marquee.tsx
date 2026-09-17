@@ -1,12 +1,16 @@
 const items = [
+  "Coffee",
+  "Breakfast",
+  "Lunch",
+  "Dinner",
+  "Dessert",
   "Croffles",
   "Coffee",
-  "Matcha",
-  "Good mornings",
+  "Breakfast",
+  "Lunch",
+  "Dinner",
+  "Dessert",
   "Croffles",
-  "Coffee",
-  "Matcha",
-  "Good mornings",
 ];
 
 export function Marquee() {

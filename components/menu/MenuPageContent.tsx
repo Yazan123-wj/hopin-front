@@ -28,8 +28,9 @@ export function MenuPageContent() {
         <div className="absolute inset-x-0 bottom-0 px-5 pb-7 text-white md:px-8 md:pb-10">
           <p className="text-[11px] tracking-[0.22em] uppercase text-white/75">Digital menu</p>
           <h1 className="mt-2 font-serif text-[clamp(4rem,12vw,9rem)] leading-[0.8]">Menu</h1>
-          <p className="mt-3 text-[12px] tracking-[0.16em] uppercase text-white/80">
-            Croffles, coffee, matcha and more.
+          <p className="mt-3 max-w-[36ch] text-[14px] leading-6 text-white/80 md:text-[15px] md:tracking-normal md:normal-case">
+            Breakfast until 3pm. A full lunch and dinner menu after that, alongside something sweet
+            whenever the mood takes you.
           </p>
         </div>
       </section>

@@ -63,6 +63,7 @@ export interface SiteSettings {
     address: string;
     mapsUrl: string;
     status: string;
+    note?: string;
   };
   openingHours: OpeningHours[];
   contact: {

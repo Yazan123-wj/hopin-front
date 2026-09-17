@@ -61,7 +61,9 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           <br />
           {site.location.status}
         </p>
-        <a href={`mailto:${site.contact.email}`}>Contact</a>
+        <Link href="/contact" onClick={onClose}>
+          Contact
+        </Link>
       </div>
     </div>
   );

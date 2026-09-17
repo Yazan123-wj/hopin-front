@@ -4,7 +4,7 @@ export const jobs: Job[] = [
   {
     id: "barista",
     title: "Barista",
-    location: "Australia",
+    location: "Gymea",
     employmentType: "Full Time",
     department: "Front of House",
     shortDescription: "Coffee, conversation, and a calm morning service.",
@@ -26,7 +26,7 @@ export const jobs: Job[] = [
   {
     id: "all-rounder",
     title: "Café All-Rounder",
-    location: "Australia",
+    location: "Gymea",
     employmentType: "Part Time",
     department: "Front of House",
     shortDescription: "Floor, bar support, and the little things that keep service kind.",
@@ -48,7 +48,7 @@ export const jobs: Job[] = [
   {
     id: "kitchen",
     title: "Kitchen Team Member",
-    location: "Australia",
+    location: "Gymea",
     employmentType: "Casual",
     department: "Kitchen",
     shortDescription: "Croffles, breakfast, and a kitchen that stays composed.",
@@ -70,7 +70,7 @@ export const jobs: Job[] = [
   {
     id: "supervisor",
     title: "Store Supervisor",
-    location: "Australia",
+    location: "Gymea",
     employmentType: "Full Time",
     department: "Leadership",
     shortDescription: "Lead the floor, protect the standard, look after the team.",

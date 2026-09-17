@@ -17,17 +17,17 @@ export function FoodShowcase() {
         </div>
         <div className="flex flex-col justify-center px-5 py-20 md:px-12 md:py-24 lg:px-16 lg:py-0">
           <Reveal>
-            <p className="text-[12px] tracking-[0.22em] uppercase text-secondary">Signature</p>
+            <p className="text-[12px] tracking-[0.22em] uppercase text-secondary">Our croffles</p>
             <h2 className="mt-5 font-serif text-[clamp(2.8rem,5.5vw,5.2rem)] leading-[0.9]">
-              Classic
+              Made to
               <br />
-              croffle.
+              be savoured.
             </h2>
-            <p className="mt-6 max-w-[24ch] text-[17px] leading-7 text-muted">
-              Flaky. Golden. Made fresh.
+            <p className="mt-6 max-w-[32ch] text-[17px] leading-7 text-muted">
+              A golden croffle topped with tiramisu cream, served alongside an iced coffee.
             </p>
             <div className="mt-8">
-              <ArrowLink href="/menu#croffles">Discover</ArrowLink>
+              <ArrowLink href="/menu#croffles">View all</ArrowLink>
             </div>
           </Reveal>
         </div>

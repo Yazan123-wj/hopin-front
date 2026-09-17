@@ -2,19 +2,17 @@ import type { SiteSettings } from "@/types";
 
 export const site: SiteSettings = {
   name: "Hop In",
-  tagline: "Croffles & Coffee",
-  statement: "Home to the",
+  tagline: "A café first",
+  statement: "A café first",
   location: {
-    city: "Australia",
+    city: "Gymea",
     country: "Australia",
-    address: "Address coming soon",
-    mapsUrl: "#location",
-    status: "Open today",
+    address: "89 Gymea Bay Road",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=89+Gymea+Bay+Road+Gymea+NSW",
+    status: "Open 6am–10pm daily",
+    note: "300m from Gymea station",
   },
-  openingHours: [
-    { days: "Mon — Fri", hours: "7:00 AM — 6:00 PM" },
-    { days: "Sat — Sun", hours: "8:00 AM — 7:00 PM" },
-  ],
+  openingHours: [{ days: "Open daily", hours: "6am — 10pm" }],
   contact: {
     email: "hello@hopin.com.au",
     phone: "",
@@ -31,5 +29,5 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/menu", label: "Menu" },
-  { href: "/careers", label: "Careers" },
+  { href: "/contact", label: "Contact" },
 ] as const;

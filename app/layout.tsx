@@ -18,14 +18,15 @@ const display = Bricolage_Grotesque({
 
 export const metadata: Metadata = {
   title: {
-    default: "Hop In | Croffles & Coffee",
+    default: "Hop In — A café first in Gymea",
     template: "%s | Hop In",
   },
   description:
-    "A café for croffles, coffee and unhurried mornings.",
+    "Hop In is a neighbourhood café on Gymea Bay Road. Proper coffee from early. Breakfast until 3pm. Lunch, dinner and dessert until 10pm.",
   openGraph: {
-    title: "Hop In | Croffles & Coffee",
-    description: "Croffles, coffee and good mornings.",
+    title: "Hop In — A café first in Gymea",
+    description:
+      "Coffee, breakfast, lunch, dinner and dessert. Open 6am–10pm daily at 89 Gymea Bay Road.",
     type: "website",
   },
 };
