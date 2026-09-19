@@ -9,6 +9,9 @@ const slides = [
   "A café first.",
 ];
 
+const subtitle =
+  "Hop In is a neighbourhood café on Gymea Bay Road, open from 6am to 10pm, seven days a week. Proper coffee from early. Breakfast until 3pm.";
+
 export function StatementSwiper() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -44,7 +47,7 @@ export function StatementSwiper() {
           setTouchStart(null);
         }}
       >
-        <div className="relative mx-auto min-h-[15rem] w-full max-w-[18ch] font-serif text-[clamp(2.2rem,5vw,4.4rem)] leading-[0.95] md:min-h-[17rem]">
+        <div className="relative mx-auto min-h-[6.5rem] w-full max-w-[18ch] font-serif text-[clamp(2.2rem,5vw,4.4rem)] leading-[0.95] md:min-h-[8.5rem]">
           {slides.map((slide, slideIndex) => (
             <p
               key={slide}
@@ -63,7 +66,11 @@ export function StatementSwiper() {
         </div>
       </div>
 
-      <div className="mt-6 flex items-center justify-center gap-6">
+      <p className="mx-auto mt-2 max-w-[40ch] text-[16px] leading-7 text-muted md:mt-4 md:text-[17px]">
+        {subtitle}
+      </p>
+
+      <div className="mt-10 flex items-center justify-center gap-6 md:mt-12">
         <button
           type="button"
           aria-label="Previous statement"
