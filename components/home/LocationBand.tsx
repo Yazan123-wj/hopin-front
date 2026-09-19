@@ -18,13 +18,10 @@ export function LocationBand() {
         <br />
         {site.location.city}
       </p>
-      <div className="mt-5 space-y-2 text-[14px]">
-        {site.openingHours.map((row) => (
-          <p key={row.days}>
-            {row.days} — {row.hours}
-          </p>
-        ))}
-      </div>
+      {site.location.note ? (
+        <p className="mt-2 text-[15px] text-muted">{site.location.note}</p>
+      ) : null}
+      <p className="mt-5 text-[14px]">{site.location.status}</p>
       <div className="mt-8">
         <ArrowLink href={site.location.mapsUrl}>Get Directions</ArrowLink>
       </div>

@@ -21,7 +21,7 @@ const tiles = [
     sizes: "(max-width: 768px) 100vw, 50vw",
   },
   {
-    href: "/menu#sweets",
+    href: "/menu#french-toast",
     image: "/images/cookies.jpg",
     alt: "A broken chocolate chip cookie",
     title: "Sweets",

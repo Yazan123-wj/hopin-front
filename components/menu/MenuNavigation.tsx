@@ -15,7 +15,7 @@ export function MenuNavigation({ active, onChange }: MenuNavProps) {
   return (
     <div className="sticky top-[var(--header-height)] z-20 border-b border-line bg-background/95 backdrop-blur-sm">
       <nav
-        className="category-scroll flex gap-1 overflow-x-auto px-4 py-3 md:px-8"
+        className="category-scroll flex flex-nowrap gap-1 overflow-x-auto px-4 py-3 md:px-8"
         aria-label="Menu categories"
       >
         {filters.map((item) => (
@@ -27,7 +27,7 @@ export function MenuNavigation({ active, onChange }: MenuNavProps) {
             className={cn(
               "shrink-0 rounded-full px-4 py-2 text-[11px] tracking-[0.16em] uppercase transition-colors duration-300",
               active === item.id
-                ? "bg-secondary text-background"
+                ? "bg-secondary text-white"
                 : "text-foreground hover:bg-foreground/6",
             )}
           >

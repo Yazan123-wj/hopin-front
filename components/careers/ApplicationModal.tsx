@@ -159,7 +159,7 @@ export function ApplicationModal({ job, open, onClose }: ApplicationModalProps) 
             <button
               type="button"
               onClick={onClose}
-              className="mt-10 self-start rounded-[6px] bg-secondary px-6 py-3.5 text-[12px] tracking-[0.16em] uppercase text-background"
+              className="mt-10 self-start rounded-[6px] bg-secondary px-6 py-3.5 text-[12px] tracking-[0.16em] uppercase text-white"
             >
               Done
             </button>
@@ -223,7 +223,7 @@ export function ApplicationModal({ job, open, onClose }: ApplicationModalProps) 
             <button
               type="submit"
               disabled={submitting}
-              className="w-full rounded-[6px] bg-secondary py-4 text-[12px] tracking-[0.18em] uppercase text-background transition-opacity disabled:opacity-60"
+              className="w-full rounded-[6px] bg-secondary py-4 text-[12px] tracking-[0.18em] uppercase text-white transition-opacity disabled:opacity-60"
             >
               {submitting ? "Sending…" : "Submit application"}
             </button>

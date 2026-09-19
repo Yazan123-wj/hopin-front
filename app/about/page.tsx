@@ -121,7 +121,7 @@ export default function AboutPage() {
           Come hop in.
         </h2>
         <p className="mx-auto mt-6 max-w-[28ch] text-[16px] leading-7 text-muted">
-          {site.location.address}, {site.location.city}. {site.location.note}.
+          {site.location.address}. {site.location.note}. {site.location.status}.
         </p>
         <div className="mt-10 flex justify-center">
           <ArrowLink href={site.location.mapsUrl}>Get Directions</ArrowLink>

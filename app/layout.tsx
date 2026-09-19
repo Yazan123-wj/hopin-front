@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Inter } from "next/font/google";
+import { Hanken_Grotesk, Inter } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
@@ -10,9 +10,9 @@ const inter = Inter({
   display: "swap",
 });
 
-const display = Bricolage_Grotesque({
+const heading = Hanken_Grotesk({
   subsets: ["latin"],
-  variable: "--font-serif",
+  variable: "--font-hanken",
   display: "swap",
 });
 
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hop In — A café first in Gymea",
     description:
-      "Coffee, breakfast, lunch, dinner and dessert. Open 6am–10pm daily at 89 Gymea Bay Road.",
+      "Coffee, breakfast, lunch, dinner and dessert. Open 6am–10pm, 7 days at 89 Gymea Bay Road.",
     type: "website",
   },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${inter.variable} ${display.variable}`} data-scroll-behavior="smooth">
+    <html lang="en" className={`${inter.variable} ${heading.variable}`} data-scroll-behavior="smooth">
       <body>
         <Header />
         <main id="main">{children}</main>

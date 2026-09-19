@@ -5,7 +5,7 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Find Hop In at ${site.location.address}, ${site.location.city}. Open 6am–10pm daily.`,
+  description: `Find Hop In at ${site.location.address}, ${site.location.city}. ${site.location.status}.`,
 };
 
 export default function ContactPage() {
@@ -25,11 +25,7 @@ export default function ContactPage() {
           <p className="mt-3 text-[15px] text-header-text/70">{site.location.note}</p>
         ) : null}
         <div className="mt-6 space-y-2 text-[14px]">
-          {site.openingHours.map((row) => (
-            <p key={row.days}>
-              {row.days} — {row.hours}
-            </p>
-          ))}
+          <p>{site.location.status}</p>
           <p>Dine in or take away</p>
         </div>
         <div className="mt-10">

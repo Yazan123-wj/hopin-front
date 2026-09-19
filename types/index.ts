@@ -1,10 +1,4 @@
-export type MenuCategoryId =
-  | "breakfast"
-  | "croffles"
-  | "coffee"
-  | "matcha"
-  | "sweets"
-  | "cold-drinks";
+export type MenuCategoryId = string;
 
 export interface MenuCategory {
   id: MenuCategoryId;
@@ -15,9 +9,10 @@ export interface MenuItem {
   id: string;
   name: string;
   description: string;
-  price: number;
+  price: number | null;
+  largePrice?: number | null;
   category: MenuCategoryId;
-  image?: string;
+  image: string | null;
   dietaryTags: string[];
   featured: boolean;
 }

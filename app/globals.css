@@ -2,14 +2,14 @@
 
 :root {
   --background: #f0e7d7;
-  --foreground: #1a2f25;
-  --primary: #1a2f25;
-  --secondary: #b25d42;
-  --accent: #cea44f;
-  --header: #1a2f25;
-  --header-text: #f0e7d7;
+  --foreground: #143024;
+  --primary: #143024;
+  --secondary: #143024;
+  --accent: #ffffff;
+  --header: #143024;
+  --header-text: #ffffff;
   --muted: #5c6b62;
-  --line: rgba(26, 47, 37, 0.14);
+  --line: rgba(20, 48, 36, 0.14);
   --header-height: 4.75rem;
   --radius-image: 12px;
   --radius-control: 999px;
@@ -38,7 +38,8 @@
   --color-muted: var(--muted);
   --color-line: var(--line);
   --font-sans: var(--font-sans);
-  --font-serif: var(--font-serif);
+  --font-heading: var(--font-hanken);
+  --font-serif: var(--font-hanken);
 }
 
 @custom-variant hover {
@@ -88,8 +89,8 @@ body {
 }
 
 ::selection {
-  background: var(--secondary);
-  color: var(--background);
+  background: var(--primary);
+  color: #ffffff;
 }
 
 img {
@@ -102,7 +103,13 @@ img {
     color: inherit;
   }
 
-  .font-serif {
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-serif,
+  .font-heading {
+    font-family: var(--font-hanken), "Hanken Grotesk", sans-serif;
     font-weight: 500;
     letter-spacing: -0.04em;
   }

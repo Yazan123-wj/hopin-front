@@ -26,15 +26,7 @@ export function Footer() {
             <p>{site.location.address}</p>
             <p>{site.location.city}</p>
             {site.location.note ? <p className="mt-2">{site.location.note}</p> : null}
-            <div className="mt-4">
-              {site.openingHours.map((row) => (
-                <p key={row.days}>
-                  {row.days}
-                  <br />
-                  {row.hours}
-                </p>
-              ))}
-            </div>
+            <p className="mt-4">{site.location.status}</p>
             <p className="mt-4">Dine in or take away</p>
           </div>
 

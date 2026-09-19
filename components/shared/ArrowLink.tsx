@@ -24,7 +24,7 @@ export function ArrowLink({
           "group inline-flex items-center gap-3 rounded-[6px] px-6 py-3.5 text-[12px] tracking-[0.16em] uppercase transition-colors duration-300",
           invert
             ? "bg-background text-foreground hover:bg-white"
-            : "bg-secondary text-background hover:bg-secondary/90",
+            : "bg-secondary text-white hover:bg-secondary/90",
           className,
         )
       : cn(
