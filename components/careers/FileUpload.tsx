@@ -41,7 +41,9 @@ export function FileUpload({ file, onChange, error }: FileUploadProps) {
 
   return (
     <div>
-      <p className="mb-2 text-[12px] tracking-[0.14em] uppercase">CV / Resume *</p>
+      <label htmlFor={id} className="mb-2 block text-[12px] tracking-[0.14em] uppercase">
+        CV / Resume *
+      </label>
       <div
         onDragOver={(event) => {
           event.preventDefault();

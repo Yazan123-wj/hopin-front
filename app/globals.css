@@ -255,6 +255,8 @@ button:not(:disabled),
 .category-scroll {
   scrollbar-width: thin;
   scrollbar-color: var(--foreground) transparent;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .category-scroll::-webkit-scrollbar {

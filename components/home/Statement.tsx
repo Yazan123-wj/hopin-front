@@ -25,8 +25,6 @@ function InfoItem({ label }: { label: string }) {
 }
 
 export function Statement() {
-  const [hours, dineIn, kids, family, address, station] = gymeaCopy.facts;
-
   return (
     <section
       id="statement"
@@ -53,23 +51,11 @@ export function Statement() {
               {gymeaCopy.paragraph2}
             </p>
 
-            <ul className="mt-10 space-y-3 md:hidden">
+            <ul className="mt-10 grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-x-10">
               {gymeaCopy.facts.map((fact) => (
                 <InfoItem key={fact} label={fact} />
               ))}
             </ul>
-            <div className="mt-10 hidden grid-cols-2 gap-x-10 gap-y-3 md:grid">
-              <ul className="space-y-3">
-                <InfoItem label={hours} />
-                <InfoItem label={kids} />
-                <InfoItem label={address} />
-              </ul>
-              <ul className="space-y-3">
-                <InfoItem label={dineIn} />
-                <InfoItem label={family} />
-                <InfoItem label={station} />
-              </ul>
-            </div>
           </div>
         </div>
       </Reveal>

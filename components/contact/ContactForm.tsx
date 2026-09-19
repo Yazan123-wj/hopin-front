@@ -42,37 +42,52 @@ export function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="max-w-[28rem]" noValidate>
-      <label className="block text-[12px] tracking-[0.16em] uppercase">
+      <label className="block text-[12px] tracking-[0.16em] uppercase" htmlFor="contact-full-name">
         Full name
         <input
+          id="contact-full-name"
           type="text"
           name="fullName"
           autoComplete="name"
           placeholder="Jane Smith"
           value={fullName}
+          aria-invalid={Boolean(errors.fullName)}
+          aria-describedby={errors.fullName ? "contact-full-name-error" : undefined}
           onChange={(event) => setFullName(event.target.value)}
           className={fieldClass}
         />
       </label>
-      {errors.fullName ? <p className="mt-2 text-[13px] text-secondary">{errors.fullName}</p> : null}
+      {errors.fullName ? (
+        <p id="contact-full-name-error" className="mt-2 text-[13px] text-secondary" role="alert">
+          {errors.fullName}
+        </p>
+      ) : null}
 
-      <label className="mt-8 block text-[12px] tracking-[0.16em] uppercase">
+      <label className="mt-8 block text-[12px] tracking-[0.16em] uppercase" htmlFor="contact-email">
         Email address
         <input
+          id="contact-email"
           type="email"
           name="email"
           autoComplete="email"
           placeholder="jane@example.com"
           value={email}
+          aria-invalid={Boolean(errors.email)}
+          aria-describedby={errors.email ? "contact-email-error" : undefined}
           onChange={(event) => setEmail(event.target.value)}
           className={fieldClass}
         />
       </label>
-      {errors.email ? <p className="mt-2 text-[13px] text-secondary">{errors.email}</p> : null}
+      {errors.email ? (
+        <p id="contact-email-error" className="mt-2 text-[13px] text-secondary" role="alert">
+          {errors.email}
+        </p>
+      ) : null}
 
-      <label className="mt-8 block text-[12px] tracking-[0.16em] uppercase">
+      <label className="mt-8 block text-[12px] tracking-[0.16em] uppercase" htmlFor="contact-message">
         Message
         <textarea
+          id="contact-message"
           name="message"
           rows={4}
           placeholder="How can we help?"

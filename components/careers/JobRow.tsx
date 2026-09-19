@@ -17,9 +17,9 @@ export function JobRow({ job }: { job: Job }) {
         aria-expanded={open}
       >
         <div>
-          <h2 className="font-serif text-[clamp(1.8rem,3.6vw,3.1rem)] leading-[0.95] transition-transform duration-300 group-hover:translate-x-1.5">
+          <h3 className="font-serif text-[clamp(1.8rem,3.6vw,3.1rem)] leading-[0.95] transition-transform duration-300 group-hover:translate-x-1.5">
             {job.title}
-          </h2>
+          </h3>
           <p className="mt-3 text-[12px] tracking-[0.12em] uppercase text-muted">
             {job.location}
             <span className="mx-3">·</span>

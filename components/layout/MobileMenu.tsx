@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { Logo } from "@/components/layout/Logo";
 import { navLinks, site } from "@/data/site";
@@ -11,6 +11,9 @@ type MobileMenuProps = {
 };
 
 export function MobileMenu({ open, onClose }: MobileMenuProps) {
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     if (!open) return;
     function onKey(event: KeyboardEvent) {
@@ -20,8 +23,54 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
     return () => window.removeEventListener("keydown", onKey);
   }, [open, onClose]);
 
+  useEffect(() => {
+    const main = document.getElementById("main");
+    const footer = document.querySelector("footer");
+    const header = document.querySelector("header");
+    if (!open) {
+      main?.removeAttribute("inert");
+      footer?.removeAttribute("inert");
+      header?.removeAttribute("inert");
+      return;
+    }
+
+    const previous = document.activeElement as HTMLElement | null;
+    main?.setAttribute("inert", "");
+    footer?.setAttribute("inert", "");
+    header?.setAttribute("inert", "");
+    window.setTimeout(() => closeRef.current?.focus(), 20);
+
+    const node = dialogRef.current;
+    function onKey(event: KeyboardEvent) {
+      if (event.key !== "Tab" || !node) return;
+      const items = [...node.querySelectorAll<HTMLElement>(
+        "a, button, [href], [tabindex]:not([tabindex='-1'])",
+      )].filter((el) => !el.hasAttribute("disabled"));
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      main?.removeAttribute("inert");
+      footer?.removeAttribute("inert");
+      header?.removeAttribute("inert");
+      previous?.focus();
+    };
+  }, [open]);
+
   return (
     <div
+      ref={dialogRef}
       className={`fixed inset-0 z-50 bg-background text-foreground transition-opacity duration-300 lg:hidden ${
         open ? "opacity-100" : "pointer-events-none opacity-0"
       }`}
@@ -33,6 +82,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
       <div className="flex h-[var(--header-height)] items-center justify-between px-5">
         <Logo />
         <button
+          ref={closeRef}
           type="button"
           className="flex h-11 w-11 items-center justify-center text-3xl leading-none"
           onClick={onClose}

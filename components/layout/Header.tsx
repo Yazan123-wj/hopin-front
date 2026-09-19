@@ -78,7 +78,7 @@ export function Header() {
             <Logo invert={!solid} />
           </div>
 
-          <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
+          <nav className="hidden items-center gap-6 lg:flex xl:gap-8" aria-label="Primary">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
