@@ -28,6 +28,11 @@ export function Footer() {
             {site.location.note ? <p className="mt-2">{site.location.note}</p> : null}
             <p className="mt-4">{site.location.status}</p>
             <p className="mt-4">Dine in or take away</p>
+            <p className="mt-4">
+              <a href={`mailto:${site.contact.email}`} className="link-underline">
+                {site.contact.email}
+              </a>
+            </p>
           </div>
 
           <div className="sm:col-span-2 md:col-span-1">
@@ -50,6 +55,9 @@ export function Footer() {
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             <a href={site.social.instagram.url} className="link-underline">
               Instagram
+            </a>
+            <a href={`mailto:${site.contact.email}`} className="link-underline">
+              Email
             </a>
             <Link href="/contact" className="link-underline">
               Contact

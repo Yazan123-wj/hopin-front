@@ -27,6 +27,11 @@ export default function ContactPage() {
         <div className="mt-6 space-y-2 text-[14px]">
           <p>{site.location.status}</p>
           <p>Dine in or take away</p>
+          <p>
+            <a href={`mailto:${site.contact.email}`} className="link-underline">
+              {site.contact.email}
+            </a>
+          </p>
         </div>
         <div className="mt-10">
           <ArrowLink href={site.location.mapsUrl} className="text-header-text">

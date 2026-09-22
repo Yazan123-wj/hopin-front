@@ -31,7 +31,7 @@ export const site: SiteSettings = {
   },
   openingHours: [{ days: "Open 6am–10pm, 7 days", hours: "" }],
   contact: {
-    email: "hello@hopin.com.au",
+    email: "Tim@hopinaustralia.com",
     phone: "",
   },
   social: {
