@@ -1,5 +1,8 @@
 import type { MenuCategory, MenuItem } from "@/types";
 
+/** Set to true once menu photography is ready. Shows real photos in the card slots. */
+export const MENU_SHOW_ITEM_PHOTOS = false;
+
 export const menuCategories: MenuCategory[] = [
   { id: "breakfast", label: "Breakfast" },
   { id: "acai", label: "Acai" },

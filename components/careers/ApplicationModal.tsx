@@ -128,7 +128,7 @@ export function ApplicationModal({ job, open, onClose }: ApplicationModalProps) 
     <div className="fixed inset-0 z-[60] flex items-stretch justify-center md:items-center md:p-6">
       <button
         type="button"
-        className="backdrop-enter absolute inset-0 bg-black/50"
+        className="backdrop-enter absolute inset-0 bg-header/70"
         aria-label="Close application"
         onClick={attemptClose}
       />
@@ -159,7 +159,7 @@ export function ApplicationModal({ job, open, onClose }: ApplicationModalProps) 
             <button
               type="button"
               onClick={onClose}
-              className="mt-10 self-start rounded-[6px] bg-secondary px-6 py-3.5 text-[12px] tracking-[0.16em] uppercase text-white"
+              className="mt-10 self-start rounded-[6px] bg-white px-6 py-3.5 text-[12px] tracking-[0.16em] uppercase text-primary"
             >
               Done
             </button>
@@ -223,7 +223,7 @@ export function ApplicationModal({ job, open, onClose }: ApplicationModalProps) 
             <button
               type="submit"
               disabled={submitting}
-              className="w-full rounded-[6px] bg-secondary py-4 text-[12px] tracking-[0.18em] uppercase text-white transition-opacity disabled:opacity-60"
+              className="w-full rounded-[6px] bg-white py-4 text-[12px] tracking-[0.18em] uppercase text-primary transition-opacity disabled:opacity-60"
             >
               {submitting ? "Sending…" : "Submit application"}
             </button>
@@ -270,7 +270,7 @@ function Field({
         className={fieldClass}
       />
       {error ? (
-        <p id={`${id}-error`} className="mt-2 text-[13px] text-red-800" role="alert">
+        <p id={`${id}-error`} className="mt-2 text-[13px] text-white" role="alert">
           {error}
         </p>
       ) : null}

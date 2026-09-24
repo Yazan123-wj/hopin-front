@@ -100,7 +100,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="mt-10 inline-flex items-center rounded-[6px] bg-secondary px-6 py-3.5 text-[12px] tracking-[0.16em] uppercase text-white transition-colors duration-300 hover:bg-secondary/90 disabled:opacity-60"
+        className="mt-10 inline-flex items-center rounded-[6px] bg-white px-6 py-3.5 text-[12px] tracking-[0.16em] uppercase text-primary transition-colors duration-300 hover:bg-white/90 disabled:opacity-60"
       >
         {submitting ? "Sending" : "Send a message"}
       </button>

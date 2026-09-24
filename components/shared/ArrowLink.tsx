@@ -13,7 +13,6 @@ export function ArrowLink({
   href,
   children,
   className,
-  invert = false,
   variant = "text",
 }: ArrowLinkProps) {
   const isExternal = href.startsWith("mailto:") || href.startsWith("http");
@@ -22,9 +21,7 @@ export function ArrowLink({
     variant === "solid"
       ? cn(
           "group inline-flex items-center gap-3 rounded-[6px] px-6 py-3.5 text-[12px] tracking-[0.16em] uppercase transition-colors duration-300",
-          invert
-            ? "bg-background text-foreground hover:bg-white"
-            : "bg-secondary text-white hover:bg-secondary/90",
+          "bg-white text-primary hover:bg-white/90",
           className,
         )
       : cn(

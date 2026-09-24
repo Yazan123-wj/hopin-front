@@ -8,7 +8,7 @@ type LogoProps = {
   className?: string;
 };
 
-export function Logo({ invert = false, className }: LogoProps) {
+export function Logo({ invert = true, className }: LogoProps) {
   return (
     <Link
       href="/"
@@ -18,8 +18,8 @@ export function Logo({ invert = false, className }: LogoProps) {
       <Image
         src={invert ? "/branding/logo-light.png" : "/branding/logo-dark.png"}
         alt=""
-        width={178}
-        height={50}
+        width={1024}
+        height={354}
         className="h-9 w-auto md:h-10"
         priority
       />

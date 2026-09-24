@@ -16,13 +16,13 @@ export default function ContactPage() {
         <h1 className="mt-5 max-w-[10ch] font-serif text-[clamp(3.4rem,10vw,8.5rem)] leading-[0.84]">
           Find us
         </h1>
-        <p className="mt-8 max-w-[32ch] text-[16px] leading-7 text-header-text/80">
+        <p className="mt-8 max-w-[32ch] text-[16px] leading-7 text-white">
           {site.location.address}
           <br />
           {site.location.city}
         </p>
         {site.location.note ? (
-          <p className="mt-3 text-[15px] text-header-text/70">{site.location.note}</p>
+          <p className="mt-3 text-[15px] text-white">{site.location.note}</p>
         ) : null}
         <div className="mt-6 space-y-2 text-[14px]">
           <p>{site.location.status}</p>

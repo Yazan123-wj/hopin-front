@@ -13,7 +13,7 @@ export function Franchise() {
             <br />
             every night.
           </h2>
-          <p className="mt-6 max-w-[32ch] text-[16px] leading-7 text-header-text/80">
+          <p className="mt-6 max-w-[32ch] text-[16px] leading-7 text-white">
             When the rest of the village has shut, you can still get dinner, dessert and a decent
             coffee.
           </p>

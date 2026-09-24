@@ -14,8 +14,8 @@ export function Hero() {
         sizes="100vw"
         className="object-cover object-center"
       />
-      <div className="absolute inset-0 bg-black/20" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/15" />
+      <div className="absolute inset-0 bg-header/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-header/75 via-transparent to-header/20" />
       <div className="absolute inset-x-0 top-[var(--header-height)] flex items-start justify-between px-5 py-5 text-[11px] tracking-[0.18em] uppercase text-white md:px-8">
         <p>Gymea Bay Road</p>
         <p>{site.location.status}</p>
@@ -28,7 +28,7 @@ export function Hero() {
           <br />
           and dessert.
         </h1>
-        <p className="mt-6 max-w-[42ch] text-[15px] leading-6 text-white/90 md:text-[16px]">
+        <p className="mt-6 max-w-[42ch] text-[15px] leading-6 text-white md:text-[16px]">
           Proper coffee from early. Breakfast until 3pm. A full lunch and dinner menu after that,
           alongside something sweet whenever the mood takes you.
         </p>
@@ -38,7 +38,7 @@ export function Hero() {
           </ArrowLink>
           <a
             href="#statement"
-            className="text-[11px] tracking-[0.2em] uppercase text-white/80"
+            className="text-[11px] tracking-[0.2em] uppercase text-white"
           >
             Scroll to explore ↓
           </a>

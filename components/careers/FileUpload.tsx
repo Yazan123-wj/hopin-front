@@ -58,7 +58,7 @@ export function FileUpload({ file, onChange, error }: FileUploadProps) {
         className={cn(
           "border border-dashed border-foreground/25 px-5 py-12 text-center transition-colors duration-300",
           drag && "border-foreground bg-foreground/5",
-          message && "border-red-800",
+          message && "border-white",
         )}
       >
         {file ? (
@@ -94,7 +94,7 @@ export function FileUpload({ file, onChange, error }: FileUploadProps) {
         />
       </div>
       {message ? (
-        <p className="mt-2 text-[13px] text-red-800" role="alert">
+        <p className="mt-2 text-[13px] text-white" role="alert">
           {message}
         </p>
       ) : null}

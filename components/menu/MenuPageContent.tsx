@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { MenuItem as MenuRow, FeaturedMenuItem } from "@/components/menu/MenuItem";
+import { MenuItem as MenuRow } from "@/components/menu/MenuItem";
 import { MenuNavigation, useMenuFilter } from "@/components/menu/MenuNavigation";
 import { getFeaturedItems, getItemsByCategory, menuCategories } from "@/data/menu";
 
@@ -24,11 +24,11 @@ export function MenuPageContent() {
           sizes="100vw"
           className="object-cover object-[center_48%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-header/80 via-header/30 to-header/35" />
         <div className="absolute inset-x-0 bottom-0 px-5 pb-7 text-white md:px-8 md:pb-10">
-          <p className="text-[11px] tracking-[0.22em] uppercase text-white/75">Digital menu</p>
+          <p className="text-[11px] tracking-[0.22em] uppercase text-white">Digital menu</p>
           <h1 className="mt-2 font-serif text-[clamp(4rem,12vw,9rem)] leading-[0.8]">Menu</h1>
-          <p className="mt-3 max-w-[36ch] text-[14px] leading-6 text-white/80 md:text-[15px] md:tracking-normal md:normal-case">
+          <p className="mt-3 max-w-[36ch] text-[14px] leading-6 text-white md:text-[15px] md:tracking-normal md:normal-case">
             Breakfast until 3pm. A full lunch and dinner menu after that, alongside something sweet
             whenever the mood takes you.
           </p>
@@ -45,9 +45,9 @@ export function MenuPageContent() {
               Favourites
             </h2>
           </div>
-          <div className="flex flex-col">
-            {featured.map((item, index) => (
-              <FeaturedMenuItem key={item.id} item={item} index={index} />
+          <div className="grid grid-cols-1 gap-x-6 gap-y-10 px-5 pb-6 min-[420px]:grid-cols-2 md:px-8 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+            {featured.map((item) => (
+              <MenuRow key={item.id} item={item} />
             ))}
           </div>
         </section>
@@ -62,10 +62,10 @@ export function MenuPageContent() {
             id={category.id}
             className="scroll-mt-[calc(var(--header-height)+3.85rem)] bg-background px-5 py-14 md:px-10 md:py-20"
           >
-            <h2 className="border-b border-line pb-4 font-serif text-[clamp(2.2rem,5vw,4.2rem)] leading-[0.88]">
+            <h2 className="border-b border-line pb-6 font-serif text-[clamp(2.2rem,5vw,4.2rem)] leading-[0.88]">
               {category.label}
             </h2>
-            <div>
+            <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 min-[420px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
               {items.map((item) => (
                 <MenuRow key={item.id} item={item} />
               ))}

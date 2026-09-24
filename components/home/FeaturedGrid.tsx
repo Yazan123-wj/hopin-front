@@ -48,7 +48,7 @@ export function FeaturedGrid() {
               sizes={tile.sizes}
               className={`object-cover ${tile.position}`}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-header/70 via-transparent to-transparent" />
             <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5 text-white md:p-7">
               <h3 className="font-serif text-[clamp(2.2rem,5vw,4.2rem)] leading-none">
                 {tile.title}

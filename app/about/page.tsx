@@ -23,7 +23,7 @@ export default function AboutPage() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/25" />
+        <div className="absolute inset-0 bg-header/35" />
         <h1 className="absolute bottom-10 left-5 max-w-[10ch] font-serif text-[clamp(3.8rem,11vw,9.5rem)] leading-[0.82] text-white md:left-8 md:bottom-14">
           Sharing
           <br />
@@ -67,7 +67,7 @@ export default function AboutPage() {
           <h2 className="mx-auto mt-6 max-w-[12ch] font-serif text-[clamp(2.8rem,7vw,6.4rem)] leading-[0.88]">
             Open late, every night.
           </h2>
-          <p className="mx-auto mt-10 max-w-[38ch] text-[16px] leading-7 text-header-text/80">
+          <p className="mx-auto mt-10 max-w-[38ch] text-[16px] leading-7 text-white">
             When the rest of the village has shut, you can still get dinner, dessert and a decent
             coffee.
           </p>

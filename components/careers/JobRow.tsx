@@ -58,7 +58,7 @@ export function JobRow({ job }: { job: Job }) {
             <button
               type="button"
               onClick={() => setApply(true)}
-              className="group inline-flex items-center gap-3 rounded-[6px] bg-secondary px-6 py-3.5 text-[12px] tracking-[0.16em] uppercase text-white transition-colors duration-300 hover:bg-secondary/90"
+              className="group inline-flex items-center gap-3 rounded-[6px] bg-white px-6 py-3.5 text-[12px] tracking-[0.16em] uppercase text-primary transition-colors duration-300 hover:bg-white/90"
             >
               Apply now
               <span className="arrow" aria-hidden>

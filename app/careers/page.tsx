@@ -22,14 +22,14 @@ export default function CareersPage() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-header/40" />
         <div className="absolute inset-x-0 bottom-0 px-5 pb-10 text-white md:px-8 md:pb-14">
           <h1 className="max-w-[10ch] font-serif text-[clamp(3.4rem,10vw,8.5rem)] leading-[0.84]">
             Come work
             <br />
             with us.
           </h1>
-          <p className="mt-5 text-[15px] text-white/85">Good people welcome.</p>
+          <p className="mt-5 text-[15px] text-white">Good people welcome.</p>
         </div>
       </section>
 

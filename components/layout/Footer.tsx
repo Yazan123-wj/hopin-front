@@ -6,7 +6,7 @@ import { navLinks, site } from "@/data/site";
 export function Footer() {
   return (
     <footer className="bg-background p-3 md:p-4">
-      <div className="overflow-hidden rounded-[28px] bg-header px-6 pt-10 text-header-text md:rounded-[40px] md:px-10 md:pt-12">
+      <div className="overflow-hidden rounded-[28px] border border-white/15 bg-header px-6 pt-10 text-header-text md:rounded-[40px] md:px-10 md:pt-12">
         <div className="grid grid-cols-1 gap-10 text-[13px] leading-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
           <nav aria-label="Footer">
             <p className="mb-4 text-[12px] tracking-[0.22em] uppercase text-accent">Navigate</p>
@@ -39,7 +39,7 @@ export function Footer() {
             <p className="mb-4 text-[12px] tracking-[0.22em] uppercase text-accent">
               Stay in the loop
             </p>
-            <p className="max-w-[28ch] text-header-text/80">
+            <p className="max-w-[28ch] text-white">
               New flavours, seasonal specials, and café news.
             </p>
             <NewsletterForm />
@@ -47,7 +47,7 @@ export function Footer() {
         </div>
 
         <Link href="/" className="footer-mark" aria-label={`${site.name} home`}>
-          <Image src="/branding/logo-light.png" alt="" width={356} height={100} />
+          <Image src="/branding/logo-light.png" alt="" width={1024} height={354} />
         </Link>
 
         <div className="flex flex-col gap-4 border-t border-header-text/15 py-5 text-[11px] tracking-[0.16em] uppercase md:flex-row md:items-center md:justify-between">

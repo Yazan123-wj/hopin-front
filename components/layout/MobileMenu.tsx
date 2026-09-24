@@ -80,7 +80,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
       aria-label="Menu"
     >
       <div className="flex h-[var(--header-height)] items-center justify-between px-5">
-        <Logo />
+        <Logo invert />
         <button
           ref={closeRef}
           type="button"

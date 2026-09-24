@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f0e7d7;
-  --foreground: #143024;
+  --background: #143024;
+  --foreground: #ffffff;
   --primary: #143024;
-  --secondary: #143024;
+  --secondary: #ffffff;
   --accent: #ffffff;
   --header: #143024;
   --header-text: #ffffff;
-  --muted: #5c6b62;
-  --line: rgba(20, 48, 36, 0.14);
+  --muted: #ffffff;
+  --line: rgba(255, 255, 255, 0.16);
   --header-height: 4.75rem;
   --radius-image: 12px;
   --radius-control: 999px;
@@ -39,7 +39,7 @@
   --color-line: var(--line);
   --font-sans: var(--font-hanken);
   --font-heading: var(--font-hanken);
-  --font-serif: var(--font-hanken);
+  --font-serif: var(--font-east-kind);
 }
 
 @custom-variant hover {
@@ -83,14 +83,15 @@ body {
   color: var(--foreground);
   font-family: var(--font-hanken), "Hanken Grotesk", sans-serif;
   font-size: 17px;
+  font-weight: 600;
   line-height: 1.55;
   overflow-x: clip;
   overscroll-behavior: none;
 }
 
 ::selection {
-  background: var(--primary);
-  color: #ffffff;
+  background: #ffffff;
+  color: #143024;
 }
 
 img {
@@ -103,15 +104,21 @@ img {
     color: inherit;
   }
 
-  h1,
-  h2,
   h3,
   h4,
-  .font-serif,
   .font-heading {
     font-family: var(--font-hanken), "Hanken Grotesk", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: -0.04em;
+  }
+
+  h1,
+  h2,
+  .font-serif {
+    font-family: var(--font-east-kind), "East Kind Light", sans-serif;
+    font-weight: 300;
+    font-synthesis: none;
+    letter-spacing: -0.03em;
   }
 }
 

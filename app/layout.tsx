@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { Hanken_Grotesk } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
+
+const eastKind = localFont({
+  src: "./fonts/TBJEastKind-Light.ttf",
+  variable: "--font-east-kind",
+  display: "swap",
+  weight: "300",
+});
 
 const hanken = Hanken_Grotesk({
   subsets: ["latin"],
@@ -27,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={hanken.variable} data-scroll-behavior="smooth">
+    <html lang="en" className={`${eastKind.variable} ${hanken.variable}`} data-scroll-behavior="smooth">
       <body>
         <Header />
         <main id="main">{children}</main>
