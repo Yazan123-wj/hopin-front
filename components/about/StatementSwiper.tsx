@@ -10,7 +10,7 @@ const slides = [
 ];
 
 const subtitle =
-  "Hop In is a neighbourhood café on Gymea Bay Road, open from 6am to 10pm, seven days a week. Proper coffee from early. Breakfast until 3pm.";
+  "Hop In is a neighbourhood café on Gymea Bay Road, open until 10pm every day. Proper coffee from early. Breakfast until 3pm.";
 
 export function StatementSwiper() {
   const [index, setIndex] = useState(0);

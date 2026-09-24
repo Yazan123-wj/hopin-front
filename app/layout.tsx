@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hop In — A café first in Gymea",
     description:
-      "Coffee, breakfast, lunch, dinner and dessert. Open 6am–10pm, 7 days at 89 Gymea Bay Road.",
+      "Coffee, breakfast, lunch, dinner and dessert. Open until 10pm every day at 89 Gymea Bay Road.",
     type: "website",
   },
 };

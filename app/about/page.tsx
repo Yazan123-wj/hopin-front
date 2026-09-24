@@ -8,7 +8,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Hop In is a neighbourhood café on Gymea Bay Road, open from 6am to 10pm, seven days a week.",
+    "Hop In is a neighbourhood café on Gymea Bay Road, open until 10pm every day.",
 };
 
 export default function AboutPage() {
@@ -52,8 +52,8 @@ export default function AboutPage() {
               first.
             </h2>
             <p className="mt-8 max-w-[38ch] text-[17px] leading-7">
-              Hop In is a neighbourhood café on Gymea Bay Road, open from 6am to 10pm, seven days a
-              week. Proper coffee from early. Breakfast until 3pm. A full lunch and dinner menu after
+              Hop In is a neighbourhood café on Gymea Bay Road, open until 10pm every day. Proper
+              coffee from early. Breakfast until 3pm. A full lunch and dinner menu after
               that — burgers, sandwiches, pastas, salads and steak — alongside acai bowls, pancakes,
               French toast and, yes, the croffles.
             </p>
